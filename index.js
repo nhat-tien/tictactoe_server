@@ -1,7 +1,7 @@
 import express  from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import GameService from "./services/GameService.js"
+import GameController from "./controllers/GameController";
 
 
 const app = express();
@@ -10,7 +10,7 @@ const io = new Server(server, { cors: { origin: "*" } });
 
 global._io = io;
 
-global._io.on('connection', GameService.connection)
+global._io.on('connection', GameController.connection)
 
 
 server.listen(5000, () =>

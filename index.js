@@ -14,5 +14,5 @@ global._io.on('connection', GameController.connection)
 
 
 server.listen(5000, () =>
-  console.log("server running => http://localhost:5000")
+  console.log("server running ")
 );

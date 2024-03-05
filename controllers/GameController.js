@@ -26,6 +26,11 @@ class GameController {
 		// console.log("room size after " + ids.size);
   });
 
+	socket.on("leave_room", ({ roomId }) => {
+		console.log(`A user leaved the room ${roomId}`);
+    socket.leave(roomId);
+	})
+
   socket.on("move", ({ roomId, board, move, player }) => {
     let { isEnd, winner } = checkResult3x3(board, move, player);
 		if (isEnd) {

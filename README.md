@@ -1,16 +1,25 @@
 # Tictactoe Server
 
-> For multiplayer
+Socket.io Nodejs server for tictactoe game.
 
-## Notes
+front-end: [tictactoe](https://github.com/nhat-tien/tictactoe)
 
-**When player do a move**
+## Setup
 
-- Get [x,y] of move
-- Check result of game with the location of move and current game state
-  - End with win/lose or draw
-- If it's not over yet: 
-  - Change game state
-  - Change turn
-  - Emit the state `{ board, turn }` 
+### Install dependencies
 
+```bash
+npm install
+```
+
+### Run Development
+
+```bash
+npm run dev
+```
+
+### Run test
+
+```bash
+npm run test
+```
